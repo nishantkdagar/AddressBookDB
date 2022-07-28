@@ -1,13 +1,11 @@
-mysql> UPDATE addressbook SET zip = 441108 WHERE firstName = 'Nishant' OR lastName = 'Malik';
-Query OK, 2 row affected (0.01 sec)
-Rows matched: 2  Changed: 2  Warnings: 0
+mysql> DELETE FROM addressbook WHERE emailAddress = 'nishant@gmail.com';
+Query OK, 1 row affected (0.07 sec)
 
 mysql> SELECT * FROM addressbook;
 +-----------+----------+---------+---------+---------+--------+-------------+--------------------+
 | firstName | lastName | address | city    | state   | zip    | phoneNumber | emailAddress       |
 +-----------+----------+---------+---------+---------+--------+-------------+--------------------+
-| Nishant   | Kumar    | Mapsko  | Sonipat | Haryana | 441108 | 9876543210  | nishant@gmail.com  |
 | Anshuman  | Kumar    | Mapsko  | Sonipat | Haryana | 131001 | 0123456789  | anshuman@gmail.com |
 | Ujjwal    | Malik    | Mapsko  | Sonipat | Haryana | 441108 | 9876501234  | ujjwal@gmail.com   |
 +-----------+----------+---------+---------+---------+--------+-------------+--------------------+
-3 rows in set (0.00 sec)
+2 rows in set (0.00 sec)
