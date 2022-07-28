@@ -1,11 +1,7 @@
-mysql> DELETE FROM addressbook WHERE emailAddress = 'nishant@gmail.com';
-Query OK, 1 row affected (0.07 sec)
-
-mysql> SELECT * FROM addressbook;
-+-----------+----------+---------+---------+---------+--------+-------------+--------------------+
-| firstName | lastName | address | city    | state   | zip    | phoneNumber | emailAddress       |
-+-----------+----------+---------+---------+---------+--------+-------------+--------------------+
-| Anshuman  | Kumar    | Mapsko  | Sonipat | Haryana | 131001 | 0123456789  | anshuman@gmail.com |
-| Ujjwal    | Malik    | Mapsko  | Sonipat | Haryana | 441108 | 9876501234  | ujjwal@gmail.com   |
-+-----------+----------+---------+---------+---------+--------+-------------+--------------------+
-2 rows in set (0.00 sec)
+mysql> SELECT * FROM addressbook WHERE city = 'Nagpur';
++-----------+----------+---------+--------+---------+--------+-------------+------------------+
+| firstName | lastName | address | city   | state   | zip    | phoneNumber | emailAddress     |
++-----------+----------+---------+--------+---------+--------+-------------+------------------+
+| Ujjwal    | Malik    | Mapsko  | Nagpur | Haryana | 441108 | 9876501234  | ujjwal@gmail.com |
++-----------+----------+---------+--------+---------+--------+-------------+------------------+
+1 row in set (0.00 sec)
