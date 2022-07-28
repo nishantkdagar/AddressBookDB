@@ -1,27 +1,16 @@
-mysql> CREATE TABLE addressbook
-    ->      (
-    ->      firstName varchar(50) NOT NULL,
-    ->      lastName varchar(50) NOT NULL,
-    ->      address varchar(100),
-    ->      city varchar(20),
-    ->      state varchar(50),
-    ->      zip varchar(10),
-    ->      phoneNumber varchar(15),
-    ->      emailAddress varchar(50)
-    ->      );
-Query OK, 0 rows affected (0.02 sec)
+mysql> INSERT INTO addressbook ( firstName, lastName, address, city, state, zip, phoneNumber, emailAddress) VALUES
+    ->     ('Nishant', 'Kumar', 'Mapsko', 'Sonipat', 'Haryana', '131001', '9876543210', 'nishant@gmail.com'),
+    ->     ('Anshuman', 'Kumar', 'Mapsko', 'Sonipat', 'Haryana', '131001', '0123456789', 'anshuman@gmail.com'),
+    ->     ('Ujjwal', 'Malik', 'Mapsko', 'Sonipat', 'Haryana', '131001', '9876501234', 'ujjwal@gmail.com');
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
 
-mysql> DESCRIBE addressbook;
-+--------------+--------------+------+-----+---------+-------+
-| Field        | Type         | Null | Key | Default | Extra |
-+--------------+--------------+------+-----+---------+-------+
-| firstName    | varchar(50)  | NO   |     | NULL    |       |
-| lastName     | varchar(50)  | NO   |     | NULL    |       |
-| address      | varchar(100) | YES  |     | NULL    |       |
-| city         | varchar(20)  | YES  |     | NULL    |       |
-| state        | varchar(50)  | YES  |     | NULL    |       |
-| zip          | varchar(10)  | YES  |     | NULL    |       |
-| phoneNumber  | varchar(15)  | YES  |     | NULL    |       |
-| emailAddress | varchar(50)  | YES  |     | NULL    |       |
-+--------------+--------------+------+-----+---------+-------+
-8 rows in set (0.00 sec)
+mysql> SELECT * FROM addressbook;
++-----------+----------+---------+---------+---------+--------+-------------+--------------------+
+| firstName | lastName | address | city    | state   | zip    | phoneNumber | emailAddress       |
++-----------+----------+---------+---------+---------+--------+-------------+--------------------+
+| Nishant   | Kumar    | Mapsko  | Sonipat | Haryana | 131001 | 9876543210  | nishant@gmail.com  |
+| Anshuman  | Kumar    | Mapsko  | Sonipat | Haryana | 131001 | 0123456789  | anshuman@gmail.com |
+| Ujjwal    | Malik    | Mapsko  | Sonipat | Haryana | 131001 | 9876501234  | ujjwal@gmail.com   |
++-----------+----------+---------+---------+---------+--------+-------------+--------------------+
+3 rows in set (0.00 sec)
