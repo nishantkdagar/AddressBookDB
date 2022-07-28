@@ -1,1 +1,12 @@
-Welcome to Address Book Database
+mysql> CREATE DATABASE address_book;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> USE address_book;
+Database changed
+mysql> SELECT DATABASE();
++--------------+
+| DATABASE()   |
++--------------+
+| address_book |
++--------------+
+1 row in set (0.00 sec)
