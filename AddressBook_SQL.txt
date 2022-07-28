@@ -1,7 +1,17 @@
-mysql> SELECT * FROM addressbook WHERE city = 'Nagpur';
-+-----------+----------+---------+--------+---------+--------+-------------+------------------+
-| firstName | lastName | address | city   | state   | zip    | phoneNumber | emailAddress     |
-+-----------+----------+---------+--------+---------+--------+-------------+------------------+
-| Ujjwal    | Malik    | Mapsko  | Nagpur | Haryana | 441108 | 9876501234  | ujjwal@gmail.com |
-+-----------+----------+---------+--------+---------+--------+-------------+------------------+
-1 row in set (0.00 sec)
+mysql> SELECT city, COUNT(firstName) AS TotalPerson FROM addressbook GROUP BY city;
++---------+-------------+
+| city    | TotalPerson |
++---------+-------------+
+| Sonipat |           1 |
+| Nagpur  |           1 |
++---------+-------------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT state, COUNT(firstName) AS TotalPerson FROM addressbook GROUP BY state;
++-------------+-------------+
+| state       | TotalPerson |
++-------------+-------------+
+| Haryana     |           1 |
+| Maharashtra |           1 |
++-------------+-------------+
+2 rows in set (0.00 sec)
